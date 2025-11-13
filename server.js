@@ -1,12 +1,12 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import connectDB from "./config/db.js";
-import beltRoutes from "./routes/beltRoutes.js";
+import connectDB from "./src/config/db.js";
+import beltRoutes from "./src/routes/beltRoutes.js";
 
 dotenv.config();
 const app = express();
- 
+       
 app.use(cors({
   origin: '*',  
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
