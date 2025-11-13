@@ -5,9 +5,9 @@ const router = express.Router();
 // Save belt
 router.post("/add-belt", async (req, res) => {
   try {
-    const { teamMember, macAddress, serialNumber } = req.body;
+    const { teamMember, macAddress, serialNumber, beltSize } = req.body;
 
-    const belt = new Belt({ teamMember, macAddress, serialNumber });
+    const belt = new Belt({ teamMember, macAddress, serialNumber, beltSize });
     await belt.save();
 
     res.json({ success: true, message: "Belt saved successfully", belt });
