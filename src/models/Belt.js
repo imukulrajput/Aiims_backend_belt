@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const teamMembers = ["Mukul", "Ayush", "Happy", "Abhi", "Piyush"];
-const beltSizes = ["32", "34", "36", "38", "40", "42", "44" , "46"]; // numeric sizes as strings
+const beltSizes = ["32", "34", "36", "38", "40", "42", "44" , "46"];
 
 const BeltSchema = new mongoose.Schema(
   {
@@ -26,8 +26,8 @@ const BeltSchema = new mongoose.Schema(
       required: true,
     },
     assignedTo: {
-      type: String,
-      default: "AIIMS",
+      type: String,  // can be AIIMS, Fortis, Apollo, etc.
+      required: true,
     },
   },
   { timestamps: true }
