@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const teamMembers = ["Mukul", "Ayush", "Happy", "Abhi", "Piyush"];
-const beltSizes = ["S", "M", "L", "XL" , "XXL"]; // optional enum
+const beltSizes = ["32", "34", "36", "38", "40", "42", "44" , "46"]; // numeric sizes as strings
 
 const BeltSchema = new mongoose.Schema(
   {
@@ -22,7 +22,7 @@ const BeltSchema = new mongoose.Schema(
     },
     beltSize: {
       type: String,
-      enum: beltSizes, // comment this line if you want free text
+      enum: beltSizes,
       required: true,
     },
     assignedTo: {
